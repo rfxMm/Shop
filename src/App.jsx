@@ -11,24 +11,26 @@ import Order from "./Pages/Orders"
 import PlaceOrder from './Pages/PlaceOrder'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
+import SearchBar from './Components/SearchBar'
 
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md: px-[7vw] lg:px-[9vw]'>
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/collection' element={<Collection />}/>
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/product' element={<Product />} />
+        <Route path='/product/:productId' element={<Product />} />
         <Route path='/card' element={<Card />} />
         <Route path='/login' element={<Login />} />
         <Route path='/place_order' element={<PlaceOrder />} />
         <Route path='/orders' element={<Order />} /> 
       </Routes>
       <Footer />
-    </div>
+    </div> 
   )
 }
 
